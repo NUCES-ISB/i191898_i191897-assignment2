@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard</title>
+</head>
+<body>
+	<h1>Live Data and Swarming Predictions</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>Temperature</th>
+				<th>Humidity</th>
+				<th>Sound</th>
+				<th>Prediction</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for temp, humid, sound, pred in data %}
+			<tr>
+				<td>{{ temp }}</td>
+				<td>{{ humid }}</td>
+				<td>{{ sound }}</td>
+				<td>{{ pred }}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</body>
+</html>
