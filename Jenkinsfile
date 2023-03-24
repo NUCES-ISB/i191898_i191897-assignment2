@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'docker build -t waleed318/mlops-a2 .'
+        sh 'docker build -t waleed318/IOTstream:v1 .'
       }
     }
     stage('Login') {
@@ -19,7 +19,7 @@ pipeline {
     }
     stage('Push') {
       steps {
-        sh 'docker push waleed318/mlops-a2'
+        sh 'docker push waleed318/IOTstream:v1'
       }
     }
   }
